@@ -1,0 +1,24 @@
+class Smartphone{
+    constructor(marca, camera, armazenamento){
+        this.marca = marca;
+        this.camera = camera;
+        this.armazenamento = armazenamento;
+}
+
+fazerLigação(numero){
+    console.log(`Ligando para ${numero}`);
+}
+
+enviarMensagem(destino, mensagem){
+    console.log(`Mensagem enviada para ${mensagem}`);
+}
+
+tirarFoto(){
+    console.log(`Tirando foto com o aparelho ${this.marca} camera ${this.camera}`);
+    }
+}
+
+var novoSmartphone = new Smartphone("Xiaomi - POCO F5", "dual cam 48mp", "256gb");
+novoSmartphone.fazerLigação(81979166942);
+novoSmartphone.enviarMensagem('Olá mundo');
+novoSmartphone.tirarFoto();
