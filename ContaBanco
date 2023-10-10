@@ -1,0 +1,37 @@
+class ContaBanco{
+    constructor(nomeTitular, numeroConta, numeroAgencia){
+        this.nomeTitular = nomeTitular;
+        this.numeroConta = numeroConta;
+        this.numeroAgencia = numeroAgencia;
+        this.saldo = 100;
+
+}
+
+sacar(valor) {
+    if (valor <= this.saldo) {
+        this.saldo -= valor;
+        console.log(`Saque de ${valor} realizado com sucesso. Saldo atual: ${this.saldo}`);
+    }else{
+        console.log(`Saldo insuficiente na conta. Saldo atual: ${this.saldo}`);
+    }
+}
+
+depositar(valor) {
+    this.saldo += valor;
+    console.log(`Depósito efetuado com sucesso ${valor}. Saldo atual: ${this.saldo}`);
+}
+
+verSaldo(){
+    console.log(`O saldo atual da conta de ${this.nomeTitular}: é de ${this.saldo}`);
+    }
+}
+
+var novaConta = new ContaBanco('victor', 12345, 777);
+novaConta.depositar(5000);
+novaConta.sacar(500);
+novaConta.verSaldo();    
+
+
+
+
+
